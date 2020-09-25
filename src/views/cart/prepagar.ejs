@@ -1,0 +1,129 @@
+<% include ../partials/_header %>
+
+
+
+<!--================ Breadcumb Part HTML Start ======================-->
+
+<section id="breadcumb" style="background:url(images/grid-view/banner.jpg) no-repeat center;background-size:cover;">
+  <div class="bnr-overlay">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center p-0">
+                  <h1>Checkout</h1>
+                  <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><i class="fas fa-angle-right"></i></li>
+                      <li><a href="cart.html">Checkout</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!--================ Breadcumb Part HTML End ======================-->
+
+<!--================ Checkout Part HTML Start ======================-->
+
+<section id="cart-page">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-7">
+              <h4>Billing Details</h4>
+              <form action="/confirmacion" method="POST">
+                <input type="text" name="name" class="text" placeholder="Nombres" required>
+                <input type="text" name="number" class="text" placeholder="Teléfono" required>
+                <input type="text" name="address" class="text" placeholder="Dirección" required>
+                <input type="text" name="fecha" class="text" placeholder="Fecha de hoy. Ej: 20/07/2020" required>
+                <input type="text" name="localidad" class="text" placeholder="Localidad" required>
+                <input type="text" name="piso" class="text" placeholder="Piso (opcional)" >
+                <textarea placeholder="Order Notes Here"></textarea>
+                  <div class="col-lg-12 p-0">
+                      <label class="register shiping">Shiping Address (If there has any other adress for
+                          shipping)
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                      </label>
+                  </div>
+              </form>
+          </div>
+          <div class="col-lg-5 order-details">
+              <form>
+                  <h4>Your Orders</h4>
+                  <ul>
+                      <% if(products) { %>
+                        <li>Productos  <span>Total</span></li>
+
+                        <% for(var i = 0; i < products.length; i++) { %>
+                          <li><%= products[i].item.title %> <span>$ <%= products[i].price %></span></li>
+                      <% } %>            
+                      <li class="total">Total <span>$ <%= total %> </span></li>
+
+                      <% } else { %>                    
+                        <% } %>
+                  </ul>
+                  <div class="payment-way">
+                      <div class="accordion" id="accordionExample">
+                          <div class="accordion-noor">
+                              <div id="headingOne">
+                                  <button class="btn btn-link" type="button" data-toggle="collapse"
+                                      data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                      <h4><label><input type="radio" name="radio" checked="checked">Direct Bank Transfer</label>
+                                      </h4>
+                                  </button>
+                              </div>
+
+                              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                  data-parent="#accordionExample">
+                                  <p class="noor">Lorem Ipsum is simply dummy text of the printing and typng
+                                      industry.
+                                      Lorem Ipsum
+                                      has been the industry's standard dummy text ever since.</p>
+                              </div>
+                          </div>
+                          <div class="accordion-noor">
+                              <div id="headingTwo">
+                                  <button class="btn btn-link" type="button" data-toggle="collapse"
+                                      data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwq">
+                                      <h4><label><input type="radio" name="radio">Check Account</label></h4>
+                                  </button>
+                              </div>
+
+                              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                  data-parent="#accordionExample">
+                                  <p class="noor">Lorem Ipsum is simply dummy text of the printing and typng
+                                      industry.
+                                      Lorem Ipsum
+                                      has been the industry's standard dummy text ever since.</p>
+                              </div>
+                          </div>
+                          <div>
+                              <div id="headingThree">
+                                  <button class="btn btn-link" type="button" data-toggle="collapse"
+                                      data-target="#collapseThree" aria-expanded="true"
+                                      aria-controls="collapseThree">
+                                      <h4><label><input type="radio" name="radio">Paypal</label></h4>
+                                  </button>
+                              </div>
+
+                              <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                  data-parent="#accordionExample">
+                                  <p class="noor">Lorem Ipsum is simply dummy text of the printing and typng
+                                      industry.
+                                      Lorem Ipsum
+                                      has been the industry's standard dummy text ever since.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </form>
+          </div>
+
+      </div>
+  </div>
+</section>
+
+<!--================ Checkout Part HTML End ======================-->
+
+
+<% include ../partials/_footer %>      
