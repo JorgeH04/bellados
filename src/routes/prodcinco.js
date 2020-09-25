@@ -1,25 +1,22 @@
 const express = require('express');
 const router = express.Router();
 
- 
+
 
 // Models
-const Prodcinco = require('../models/prodcinco');
+const Prodcuatro = require('../models/prodcuatro');
 const Cart = require('../models/cart');
-//const Order = require('../models/order');
+const Order = require('../models/order');
 
 // Helpers
 const { isAuthenticated } = require('../helpers/auth');
 
 
+////////////////////////////////////////////////////////////////////////
 
 
-
-
-////////////////////////////////////////back/////////////////////////////////////////////////////7
-
-router.post('/produno/new-produno',  async (req, res) => {
-  const { name, title, image, imagedos, imagetres, description, oldprice, price, filtroprice, color, colorstock  } = req.body;
+router.post('/prodcuatro/new-prodcuatro',  async (req, res) => {
+  const { name, title, image, imagedos, imagetres, description, price } = req.body;
   const errors = [];
   if (!image) {
     errors.push({text: 'Please Write a Title.'});
@@ -38,301 +35,177 @@ router.post('/produno/new-produno',  async (req, res) => {
       price
     });
   } else {
-    const newNote = new Produno({ name, title, image, imagedos, imagetres, description, price, oldprice, filtroprice, color, colorstock  });
+    const newNote = new Prodcuatro({ name, title, image, imagedos, imagetres, description, price });
     //newNote.user = req.user.id;
     await newNote.save();
     req.flash('success_msg', 'Note Added Successfully');
-    res.redirect('/produnoback/:1');
+    res.redirect('/prodcuatroback/1');
   }
 });
 
 
+router.get('/prodcuatroredirect/:id', async (req, res) => {
+  const { id } = req.params;
+  const prodcuatro = await Prodcuatro.findById(id);
+  res.render('prodcuatro/prodcuatroredirect', {prodcuatro});
+});
+
+
+//////////////////////////////////////////////////////////////////////
+
+  router.get('/prodcuatroindex/:page', async (req, res) => {
+    let perPage = 8;
+    let page = req.params.page || 1;
+  
+    Prodcuatro
+    .find({}) // finding all documents
+    .sort({ timestamp: -1 })
+    .skip((perPage * page) - perPage) // in the first page the value of the skip is 0
+    .limit(perPage) // output just 9 items
+    .exec((err, prodcuatro) => {
+      Prodcuatro.countDocuments((err, count) => { // count to calculate the number of pages
+        if (err) return next(err);
+        res.render('prodcuatro/prodcuatro', {
+          prodcuatro,
+          current: page,
+          pages: Math.ceil(count / perPage)
+        });
+      });
+    });
+  });
+  
+  
+
+
+  router.get("/search", function(req, res){
+    let perPage = 8;
+    let page = req.params.page || 1;
+  
+    var noMatch = null;
+    if(req.query.search) {
+        const regex = new RegExp(escape(req.query.search), 'gi');
+        // Get all campgrounds from DB
+        console.log(req.query.search)
+        Prodcuatro
+        // finding all documents
+        .find({title: regex}) 
+        .sort({ _id: -1 })
+        .skip((perPage * page) - perPage) // in the first page the value of the skip is 0
+        .limit(perPage) // output just 9 items
+        .exec((err, prodcuatro) => {
+         Prodcuatro.countDocuments((err, count) => {
+          if (err) return next(err);
+              res.render("prodcuatro/prodcuatro",{
+                prodcuatro, 
+                current: page,
+                pages: Math.ceil(count / perPage)
+              });
+            });
+          });
+    } else {
+        // Get all campgrounds from DB
+        Prodcuatro.find({}, function(err, prodcuatro){
+           if(err){
+               console.log(err);
+           } else {
+              res.render("prodcuatro/prodcuatro",{
+                prodcuatro,
+                current: page,
+                pages: Math.ceil(count / perPage)
+                });
+           }
+        });
+    }
+  });
+  
 
 
 
-router.get('/produnoback/:page', async (req, res) => {
 
 
-  let perPage =12;
+
+
+
+//////////////////////////////////////////////////////////////////////
+
+router.get('/prodcuatroback/:page', async (req, res) => {
+  let perPage = 8;
   let page = req.params.page || 1;
 
-  Produno 
-  .find()// finding all documents
-  .sort({_id:-1})
+  Prodcuatro
+  .find({}) // finding all documents
+  .sort({ timestamp: -1 })
   .skip((perPage * page) - perPage) // in the first page the value of the skip is 0
   .limit(perPage) // output just 9 items
-  .exec((err, produno) => {
-    Produno.countDocuments((err, count) => { // count to calculate the number of pages
+  .exec((err, prodcuatro) => {
+    Prodcuatro.countDocuments((err, count) => { // count to calculate the number of pages
       if (err) return next(err);
-      res.render('produno/new-produno', {
-        produno,
+      res.render('prodcuatro/new-prodcuatro', {
+        prodcuatro,
         current: page,
         pages: Math.ceil(count / perPage)
       });
     });
   });
 });
-
-
-
-
 
 
 
 
 router.get("/searchback", function(req, res){
+  let perPage = 8;
+  let page = req.params.page || 1;
+
   var noMatch = null;
   if(req.query.search) {
       const regex = new RegExp(escape(req.query.search), 'gi');
       // Get all campgrounds from DB
       console.log(req.query.search)
-      Produno.find({title: regex}, function(err, produno){
-         if(err){
-             console.log(err);
-         } else {
-            if(produno.length < 1) {
-                noMatch = "No campgrounds match that query, please try again.";
-            }
-            res.render("produno/new-produno",{produno, noMatch: noMatch});
-         }
-      });
-
+      Prodcuatro
+      .find({title: regex}) 
+      .sort({ _id: -1 })
+      .skip((perPage * page) - perPage) // in the first page the value of the skip is 0
+      .limit(perPage) // output just 9 items
+      .exec((err, prodcuatro) => {
+        Prodcuatro.countDocuments((err, count) => {
+        if (err) return next(err);
+            res.render("prodcuatro/new-prodcuatro",{
+              prodcuatro, 
+              current: page,
+              pages: Math.ceil(count / perPage)
+            });
+          });
+        });
   } else {
       // Get all campgrounds from DB
-      Produno.find({}, function(err, produno){
+      Prodcuatro.find({}, function(err, prodcuatro){
          if(err){
              console.log(err);
          } else {
-            res.render("produno/produno",{produno, noMatch: noMatch});
+            res.render("prodcuatro/new-prodcuatro",{
+              prodcuatro,
+              current: page,
+              pages: Math.ceil(count / perPage)
+              });
          }
       });
   }
 });
 
 
-
-
-
-
-
-/////////////////////////////////////////front//////////////////////////////////////////////////
-
-router.get('/produnoindex/:page', async (req, res) => {
-
-
-  let perPage = 8;
-  let page = req.params.page || 1;
-
-  Produno 
-  .find({}) // finding all documents
-  .sort( {timestamp: -1})
-  .skip((perPage * page) - perPage) // in the first page the value of the skip is 0
-  .limit(perPage) // output just 9 items
-  .exec((err, produno) => {
-    Produno.countDocuments((err, count) => { // count to calculate the number of pages
-      if (err) return next(err);
-      res.render('produno/produno', {
-        produno,
-        current: page,
-        pages: Math.ceil(count / perPage)
-      });
-    });
-  });
-});
-
-
-
-
-
-
-router.get('/produnoredirect/:id', async (req, res) => {
-  const { id } = req.params;
-  const produno = await Produno.findById(id);
-  res.render('produno/produnoredirect', {produno});
-});
-
-
-
-
-
-router.get("/search", function(req, res){
-  var noMatch = null;
-  if(req.query.search) {
-      const regex = new RegExp(escape(req.query.search), 'gi');
-      // Get all campgrounds from DB
-      console.log(req.query.search)
-      Produno.find({title: regex}, function(err, produno){
-         if(err){
-             console.log(err);
-         } else {
-            if(produno.length < 1) {
-                noMatch = "No campgrounds match that query, please try again.";
-            }
-            res.render("produno/produno",{produno, noMatch: noMatch});
-         }
-      });
-
-  } else {
-      // Get all campgrounds from DB
-      Produno.find({}, function(err, produno){
-         if(err){
-             console.log(err);
-         } else {
-            res.render("produno/produno",{produno, noMatch: noMatch});
-         }
-      });
-  }
-});
-
-
-
-/////////////////////////////////filter/////////////////////////////////////////////
-
-
-
-
-router.post("/filtroprod", function(req, res){
-
-  let perPage = 8;
-  let page = req.params.page || 1;
-
-  var flrtName = req.body.filtroprod;
-
-  if(flrtName!='' ) {
-
-    var flterParameter={ $and:[{ name:flrtName},
-      {$and:[{},{}]}
-      ]
-       
-    }
-    }else{
-      var flterParameter={}
-  }
-  var produno = Produno.find(flterParameter);
-  produno
-  //.find( flterParameter) 
-  .sort({ _id: -1 })
-  .skip((perPage * page) - perPage) // in the first page the value of the skip is 0
-  .limit(perPage) // output just 9 items
-  .exec((err, data) => {
-    produno.countDocuments((err, count) => {  
-  //.exec(function(err,data){
-      if(err) throw err;
-      res.render("produno/produno",
-      {
-        produno: data, 
-        current: page,
-        pages: Math.ceil(count / perPage)
-      
-      });
-    });
-  });
-});
-
-
-
-
-
-
-
-
-router.post("/filtroprecio", function(req, res){
-
-  let perPage = 8;
-  let page = req.params.page || 1;
-
-  var flrtName = req.body.filtroprice;
-
-  if(flrtName!='' ) {
-
-    var flterParameter={ $and:[{ amount:flrtName},
-      {$and:[{},{}]}
-      ]
-       
-    }
-    }else{
-      var flterParameter={}
-  }
-  var produno = Produno.find(flterParameter);
-  produno
-  //.find( flterParameter) 
-  .sort({ _id: -1 })
-  .skip((perPage * page) - perPage) // in the first page the value of the skip is 0
-  .limit(perPage) // output just 9 items
-  .exec((err, data) => {
-    produno.countDocuments((err, count) => {  
-  //.exec(function(err,data){
-      if(err) throw err;
-      res.render("produno/produno",
-      {
-        produno: data, 
-        current: page,
-        pages: Math.ceil(count / perPage)
-      
-      });
-    });
-  });
-});
-
-
-
-
-
-
-router.post("/filtrocolor", function(req, res){
-
-  let perPage = 8;
-  let page = req.params.page || 1;
-
-  var flrtName = req.body.filtrocolor;
-
-  if(flrtName!='' ) {
-
-    var flterParameter={ $and:[{ color:flrtName},
-      {$and:[{},{}]}
-      ]
-       
-    }
-    }else{
-      var flterParameter={}
-  }
-  var produno = Produno.find(flterParameter);
-  produno
-  //.find( flterParameter) 
-  .sort({ _id: -1 })
-  .skip((perPage * page) - perPage) // in the first page the value of the skip is 0
-  .limit(perPage) // output just 9 items
-  .exec((err, data) => {
-    produno.countDocuments((err, count) => {  
-  //.exec(function(err,data){
-      if(err) throw err;
-      res.render("produno/produno",
-      {
-        produno: data, 
-        current: page,
-        pages: Math.ceil(count / perPage)
-      
-      });
-    });
-  });
-});
-
-
-
-
-/////////////////////////////crud//////////////////////////////7
-
+/////////////////////////////////////////////////////////////////////
 
 // talle y color
-router.get('/prodcinco/tallecolor/:id',  async (req, res) => {
-  const prodcinco = await Prodcinco.findById(req.params.id);
-  res.render('prodcinco/tallecolor-prodcinco', { prodcinco });
+router.get('/prodcuatro/tallecolor/:id',  async (req, res) => {
+  const prodcuatro = await Prodcuatro.findById(req.params.id);
+  res.render('prodcuatro/tallecolor-prodcuatro', { prodcuatro });
 });
 
-router.post('/prodcinco/tallecolor/:id',  async (req, res) => {
+router.post('/prodcuatro/tallecolor/:id',  async (req, res) => {
   const { id } = req.params;
-  await Prodcinco.updateOne({_id: id}, req.body);
-  res.redirect('/prodcincoredirect/' + id);
+  await Prodcuatro.updateOne({_id: id}, req.body);
+
+  res.redirect('/prodcuatroredirect/' + id);
 });
 
 
@@ -341,25 +214,25 @@ router.post('/prodcinco/tallecolor/:id',  async (req, res) => {
 //editar
 
 
-router.get('/prodcinco/edit/:id',  async (req, res) => {
-  const prodcinco = await Prodcinco.findById(req.params.id);
-  res.render('prodcinco/edit-prodcinco', { prodcinco });
+router.get('/prodcuatro/edit/:id',  async (req, res) => {
+  const prodcuatro = await Prodcuatro.findById(req.params.id);
+  res.render('prodcuatro/edit-proddos', { prodcuatro });
 });
 
-router.post('/prodcinco/edit/:id',  async (req, res) => {
+router.post('/prodcuatro/edit/:id',  async (req, res) => {
   const { id } = req.params;
-  await Prodcinco.updateOne({_id: id}, req.body);
-  res.redirect('/prodcincobackend/' + id);
+  await Prodcuatro.updateOne({_id: id}, req.body);
+  res.redirect('/prodcuatrobackend/' + id);
 });
 
 
 
 
 // Delete 
-router.get('/prodcinco/delete/:id', async (req, res) => {
+router.get('/prodcuatro/delete/:id', async (req, res) => {
   const { id } = req.params;
-    await Prodcinco.deleteOne({_id: id});
-  res.redirect('/prodcinco/add');
+    await Prodcuatro.deleteOne({_id: id});
+  res.redirect('/prodcuatro/add');
 });
 
 
@@ -367,22 +240,22 @@ router.get('/prodcinco/delete/:id', async (req, res) => {
 
 
 
-router.get('/addtocardprodcinco/:id', function(req, res, next){
+router.get('/addtocardprodcuatro/:id', function(req, res, next){
   var productId = req.params.id;
   var cart = new Cart(req.session.cart ? req.session.cart : {items: {}});
 
-  Prodcinco.findById(productId, function(err, product){
+  Prodcuatro.findById(productId, function(err, product){
     if(err){
       return res-redirect('/');
     }
     cart.add(product, product.id);
     req.session.cart = cart;
     console.log(req.session.cart);
-    res.redirect('/shopcart');
+    req.flash('success', 'Producto agregado al carro exitosamente');
+    res.redirect('/prodcuatroredirect/' + productId);
 
   });
 });
-
 
 
 module.exports = router;
