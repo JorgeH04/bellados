@@ -744,6 +744,8 @@ header .navigation .nav-appo a {
 
 #banner {
     background: url(../images/baner.jpg) no-repeat center;
+    background-size: cover;
+ 
 }
 
 #banner .banner-overlay {
