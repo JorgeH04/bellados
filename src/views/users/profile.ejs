@@ -1,458 +1,620 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title>Datta Able Free Bootstrap 4 Admin Template</title>
-    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 11]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
-    <!-- Meta -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Free Datta Able Admin Template come up with latest Bootstrap 4 framework with basic components, form elements and lots of pre-made layout options" />
-    <meta name="keywords" content="admin templates, bootstrap admin templates, bootstrap 4, dashboard, dashboard templets, sass admin templets, html admin templates, responsive, bootstrap admin templates free download,premium bootstrap admin templates, datta able, datta able bootstrap admin template, free admin theme, free dashboard template"/>
-    <meta name="author" content="CodedThemes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Favicon icon -->
-    <link rel="icon" href="/asset/images/favicon.ico" type="image/x-icon">
-    <!-- fontawesome icon -->
-    <link rel="stylesheet" href="/asset/fonts/fontawesome/css/fontawesome-all.min.css">
-    <!-- animation css -->
-    <link rel="stylesheet" href="/asset/plugins/animation/css/animate.min.css">
-    <!-- vendor css -->
-    <link rel="stylesheet" href="/asset/css/style.css">
+    <title>Dr. Lamp || Tienda Online</title>
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/assets/packages/nice-select/nice-select.css">
+    <link rel="stylesheet" href="/dist/assets/packages/animate/animate.css">
+
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/o2system-venus-ui@1.1.0/dist/venus-ui.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="/dist/assets/css/theme.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+
 
 </head>
 
+
 <body>
-  
+    
 
-    <!-- [ Pre-loader ] start -->
-    <div class="loader-bg">
-        <div class="loader-track">
-            <div class="loader-fill"></div>
-        </div>
-    </div>
-    <!-- [ Pre-loader ] End -->
-    <!-- [ navigation menu ] start -->
-    <nav class="pcoded-navbar">
-        <div class="navbar-wrapper">
-            <div class="navbar-brand header-logo">
-                <a href="/" class="b-brand">
-                    <div class="b-bg">
-                        <i class="feather icon-trending-up"></i>
-                    </div>
-                    <span class="b-title">Datta Able</span>
-                </a>
-                <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a>
-            </div>
-            <div class="navbar-content scroll-div">
-                <ul class="nav pcoded-inner-navbar">
-                    <li class="nav-item pcoded-menu-caption">
-                        <label>Navigation</label>
-                    </li>
-                    <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item active">
-                        <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
-                    </li>
-                    <li class="nav-item pcoded-menu-caption">
-                        <label>UI Element</label>
-                    </li>
-                    <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
-                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Components</span></a>
-                        <ul class="pcoded-submenu">
-                            <li class=""><a href="bc_button.html" class="">Button</a></li>
-                            <li class=""><a href="bc_badges.html" class="">Badges</a></li>
-                            <li class=""><a href="bc_breadcrumb-pagination.html" class="">Breadcrumb & paggination</a></li>
-                            <li class=""><a href="bc_collapse.html" class="">Collapse</a></li>
-                            <li class=""><a href="bc_tabs.html" class="">Tabs & pills</a></li>
-                            <li class=""><a href="bc_typography.html" class="">Typography</a></li>
-
-
-                            <li class=""><a href="icon-feather.html" class="">Feather<span class="pcoded-badge label label-danger">NEW</span></a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item pcoded-menu-caption">
-                        <label>Forms & table</label>
-                    </li>
-                    <li data-username="form elements advance componant validation masking wizard picker select" class="nav-item">
-                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Form elements</span></a>
-                    </li>
-                    <li data-username="Table bootstrap datatable footable" class="nav-item">
-                        <a href="tbl_bootstrap.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-server"></i></span><span class="pcoded-mtext">Table</span></a>
-                    </li>
-                    <li class="nav-item pcoded-menu-caption">
-                        <label>Chart & Maps</label>
-                    </li>
-                    <li data-username="Charts Morris" class="nav-item"><a href="chart-morris.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Chart</span></a></li>
-                    <li data-username="Maps Google" class="nav-item"><a href="map-google.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Maps</span></a></li>
-                    <li class="nav-item pcoded-menu-caption">
-                        <label>Pages</label>
-                    </li>
-                    <li data-username="Authentication Sign up Sign in reset password Change password Personal information profile settings map form subscribe" class="nav-item pcoded-hasmenu">
-                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">Authentication</span></a>
-                        <ul class="pcoded-submenu">
-                            <li class=""><a href="auth-signup.html" class="" target="_blank">Sign up</a></li>
-                            <li class=""><a href="auth-signin.html" class="" target="_blank">Sign in</a></li>
-                        </ul>
-                    </li>
-                    <li data-username="Sample Page" class="nav-item"><a href="sample-page.html" class="nav-link"><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li>
-                    <li data-username="Disabled Menu" class="nav-item disabled"><a href="javascript:" class="nav-link"><span class="pcoded-micon"><i class="feather icon-power"></i></span><span class="pcoded-mtext">Disabled menu</span></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- [ navigation menu ] end -->
-
-
-
-
-
-
-    <!-- [ Header ] start -->
-    <header class="navbar pcoded-header navbar-expand-lg navbar-light">
-        <div class="m-header">
-            <a class="mobile-menu" id="mobile-collapse1" href="javascript:"><span></span></a>
-            <a href="index.html" class="b-brand">
-                   <div class="b-bg">
-                       <i class="feather icon-trending-up"></i>
-                   </div>
-                   <span class="b-title">Datta Able</span>
-               </a>
-        </div>
-        <a class="mobile-menu" id="mobile-header" href="javascript:">
-            <i class="feather icon-more-horizontal"></i>
-        </a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li><a href="javascript:" class="full-screen" onclick="javascript:toggleFullScreen()"><i class="feather icon-maximize"></i></a></li>
-                <li class="nav-item dropdown">
-                    <a class="dropdown-toggle" href="javascript:" data-toggle="dropdown">Dropdown</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="javascript:">Action</a></li>
-                        <li><a class="dropdown-item" href="javascript:">Another action</a></li>
-                        <li><a class="dropdown-item" href="javascript:">Something else here</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <div class="main-search">
-                        <div class="input-group">
-                            <input type="text" id="m-search" class="form-control" placeholder="Search . . .">
-                            <a href="javascript:" class="input-group-append search-close">
-                                <i class="feather icon-x input-group-text"></i>
-                            </a>
-                            <span class="input-group-append search-btn btn btn-primary">
-                                <i class="feather icon-search input-group-text"></i>
-                            </span>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <li>
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" href="javascript:" data-toggle="dropdown"><i class="icon feather icon-bell"></i></a>
-                        <div class="dropdown-menu dropdown-menu-right notification">
-                            <div class="noti-head">
-                                <h6 class="d-inline-block m-b-0">Notifications</h6>
-                                <div class="float-right">
-                                    <a href="javascript:" class="m-r-10">mark as read</a>
-                                    <a href="javascript:">clear all</a>
-                                </div>
-                            </div>
-                            <ul class="noti-body">
-                                <li class="n-title">
-                                    <p class="m-b-0">NEW</p>
-                                </li>
-                                <li class="notification">
-                                    <div class="media">
-                                        <img class="img-radius" src="assets/images/user/avatar-1.jpg" alt="Generic placeholder image">
-                                        <div class="media-body">
-                                            <p><strong>John Doe</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>30 min</span></p>
-                                            <p>New ticket Added</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="n-title">
-                                    <p class="m-b-0">EARLIER</p>
-                                </li>
-                                <li class="notification">
-                                    <div class="media">
-                                        <img class="img-radius" src="assets/images/user/avatar-2.jpg" alt="Generic placeholder image">
-                                        <div class="media-body">
-                                            <p><strong>Joseph William</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>30 min</span></p>
-                                            <p>Prchace New Theme and make payment</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="notification">
-                                    <div class="media">
-                                        <img class="img-radius" src="assets/images/user/avatar-3.jpg" alt="Generic placeholder image">
-                                        <div class="media-body">
-                                            <p><strong>Sara Soudein</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>30 min</span></p>
-                                            <p>currently login</p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="noti-footer">
-                                <a href="javascript:">show all</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="dropdown drp-user">
-                        <a href="javascript:" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="icon feather icon-settings"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right profile-notification">
-                            <div class="pro-head">
-                                <img src="assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
-                                <span>John Doe</span>
-                                <a href="auth-signin.html" class="dud-logout" title="Logout">
-                                    <i class="feather icon-log-out"></i>
-                                </a>
-                            </div>
-                            <ul class="pro-body">
-                                <li><a href="javascript:" class="dropdown-item"><i class="feather icon-settings"></i> Settings</a></li>
-                                <li><a href="javascript:" class="dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
-                                <li><a href="message.html" class="dropdown-item"><i class="feather icon-mail"></i> My Messages</a></li>
-                                <li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i> Lock Screen</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </header>
-    <!-- [ Header ] end -->
-
-    <!-- [ Main Content ] start -->
-    <section class="pcoded-main-container">
-        <div class="pcoded-wrapper">
-            <div class="pcoded-content">
-                <div class="pcoded-inner-content">
-                    <!-- [ breadcrumb ] start -->
-                    <div class="page-header">
-                        <div class="page-block">
-                            <div class="row align-items-center">
-                                <div class="col-md-12">
-                                    <div class="page-header-title">
-                                        <h5 class="m-b-10">Bootstrap Basic Tables</h5>
-                                    </div>
-                                    <ul class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
-                                        <li class="breadcrumb-item"><a href="#!">Tables</a></li>
-                                        <li class="breadcrumb-item"><a href="javascript:">Basic Tables</a></li>
+    <main class="main">
+        <div class="container-fluid">
+            <div class="breadcrumb-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="breadcrumb-wrap">
+                                <nav aria-label="breadcrumb">
+                                    <ul class="breadcrumb" >
+                                        <li class="breadcrumb-item">
+                                            <a href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        <li class="breadcrumb-item">
+                                            <a href="/shopcart">
+                                                Carro
+                                            </a>
+                                        </li>
+                                        <li class="breadcrumb-item active" aria-current="page">
+                                            <a href="#">
+                                                Perfil
+                                            </a>
+                                        </li>
                                     </ul>
-                                </div>
+                                </nav>
                             </div>
                         </div>
                     </div>
-                    <!-- [ breadcrumb ] end -->
-                    <div class="main-body">
-                        <div class="page-wrapper">
-                            <!-- [ Main Content ] start -->
-                            <div class="row">
-                                <!-- [ basic-table ] start -->
-                                <div class="col-xl-12">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h5>Basic Table</h5>
-                                            <span class="d-block m-t-5">use class <code>table</code> inside table element</span>
-                                        </div>
-                                        <div class="card-block table-border-style">
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>#</th>
-                                                            <th>First Name</th>
-                                                            <th>Last Name</th>
-                                                            <th>Username</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>Mark</td>
-                                                            <td>Otto</td>
-                                                            <td>@mdo</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>Jacob</td>
-                                                            <td>Thornton</td>
-                                                            <td>@fat</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">3</th>
-                                                            <td>Larry</td>
-                                                            <td>the Bird</td>
-                                                            <td>@twitter</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- [ basic-table ] end -->
+                </div>
+            </div>
+            <div class="section list-products">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="myaccount-page-wrapper">
+                                <!-- My Account Tab Menu Start -->
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-4">
+                                        <div class="myaccount-tab-menu nav" role="tablist" >
+                                            <a href="#dashboard" class="active" data-toggle="tab">
+                                                <i class="fas fa-tachometer-alt" ></i>
+                                                Inicio
+                                            </a>
+                                            <a href="#compras" data-toggle="tab">
+                                                    <i class="fa fa-credit-card"></i> 
+                                                Mis compras
+                                            </a>
+                                            
+                                            <a href="#address-edit" data-toggle="tab">
+                                                <i class="fa fa-map-marker-alt"></i> 
+                                                Mis datos 
+                                            </a>
 
-                                <!-- [ Hover-table ] start -->
-                                <div class="col-xl-12">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h5>Hover Table</h5>
-                                            <span class="d-block m-t-5">use class <code>table-hover</code> inside table element</span>
-                                        </div>
-                                        <div class="card-block table-border-style">
-                                            <div class="table-responsive">
-                                                <table class="table table-hover">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>#</th>
-                                                            <th>First Name</th>
-                                                            <th>Last Name</th>
-                                                            <th>Username</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>Mark</td>
-                                                            <td>Otto</td>
-                                                            <td>@mdo</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>Jacob</td>
-                                                            <td>Thornton</td>
-                                                            <td>@fat</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">3</th>
-                                                            <td>Larry</td>
-                                                            <td>the Bird</td>
-                                                            <td>@twitter</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                                            <a href="#payment-method" data-toggle="tab">
+                                                <i class="fa fa-credit-card"></i> 
+                                                Completar mis datos 
+                                            </a>
+                                            
+                                            <a href="#account-info" data-toggle="tab">
+                                                <i class="fa fa-user"></i> 
+                                                Cambiar contraseña
+                                            </a>
+                                            <a href="/" >   
+                                                Seguir comprando
+                                            </a>
+                                            
                                         </div>
                                     </div>
-                                </div>
-                                <!-- [ Hover-table ] end -->
+                                    <!-- My Account Tab Menu End -->
+                            
+                                    <!-- My Account Tab Content Start -->
+                                    <div class="col-lg-9 col-md-8">
+                                        <div class="tab-content" id="myaccountContent">
 
-                                <!-- [ stiped-table ] start -->
-                                <div class="col-xl-12">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h5>Striped Table</h5>
-                                            <span class="d-block m-t-5">use class <code>table-striped</code> inside table element</span>
-                                        </div>
-                                        <div class="card-block table-border-style">
-                                            <div class="table-responsive">
-                                                <table class="table table-striped">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>#</th>
-                                                            <th>First Name</th>
-                                                            <th>Last Name</th>
-                                                            <th>Username</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>Mark</td>
-                                                            <td>Otto</td>
-                                                            <td>@mdo</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>Jacob</td>
-                                                            <td>Thornton</td>
-                                                            <td>@fat</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">3</th>
-                                                            <td>Larry</td>
-                                                            <td>the Bird</td>
-                                                            <td>@twitter</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+
+
+
+                                            <!-- Single Tab Content Start -->
+                                            <div class="tab-pane fade show active" id="dashboard" role="tabpanel">
+                                                    <div class="myaccount-content">
+                                                        <h3>Tu cuenta</h3>
+                                                        <div class="welcome">
+                                                            <p>Hola, <strong><%= user.name %></strong> 
+                                                        </div>
+                                                        <p class="mb-0">Desde esta cuenta usted podrá modificar sus datos personales, chequear si sus pedidos fueron aprobados,
+                                                            y ver su historial de compras.</p>
+                                                    </div>                                                            
+    
+                                                </div>
+                                                <!-- Single Tab Content End -->
+
+
+
+
+                                             <!-- Single Tab Content Start -->
+                                            <div class="tab-pane fade  " id="compras" role="tabpanel">
+                                                    <div class="myaccount-content">
+                                                            <h3>Mis compras</h3>
+                                                            <div class="myaccount-table table-responsive text-center">
+                                                                    <% orders.forEach(function (order) { %>
+        
+                                                                <table class="table table-bordered">
+                                                                    <thead class="thead-light">
+                                                                        <tr>
+                                                                            <th>Order</th>
+                                                                            <th>Producto</th>
+                                                                            <th>Cantidad</th>
+                                                                            <th>Precio</th>
+                                                                            <th><p class="<%= order.status ? 'btn btn-success' : 'btn btn-dark'%>"
+                                                                                    href="/order/turn/<%= order.id %>"> <i class="fa fa-truck" aria-hidden="true"></i> </p></th>
+                                                                        </tr>
+                                                                    </thead>
+        
+                                                                        
+                                                                    <tbody>
+                                                                        <tr>
+                                                                                <% order.items.forEach(function (item) { %>
+                                                                            <td><%= item.item.total %></td>
+                                                                            <td><%= item.item.title %></td>
+                                                                            <td><%= item.qty %></td>
+                                                                            <td><%= item.price %></td>
+        
+                                                                                      
+        
+                                                                        </tr>
+                                                                   
+                                                                       
+        
+                                                                    </tbody>
+                                                                    <% }) %>
+                                                                    <td>Total: $<%= order.total %></td>
+                                                                    <td><strong>Fecha</strong>: <%= order.createdAt.toLocaleDateString() %></td>
+                                                                    <% }) %>  
+                                                                </table>
+        
+        
+                                                                <div class="col-12">
+                                                                        <div class="row">
+                                                                              <!-- pagination -->
+                                                                              <% if(pages > 0) { %> <!-- show pagination if there is pages -->
+                                                                                <nav  class="mx-auto" style="margin-bottom: 50px">
+                                                                                  <ul class="pagination">
+                                                                                    <!-- FIRST ITEM -->
+                                                                                    <% if(current == 1) { %>
+                                                                                      <li class="page-item disabled">
+                                                                                        <a class="page-link" href="#">First</a>
+                                                                                      </li>
+                                                                                    <% } else { %>
+                                                                                      <li class="page-item">
+                                                                                        <a class="page-link" href="/perfil/1">First</a>
+                                                                                      </li>
+                                                                                    <% } %>
+                                                                                    <!-- ITEMS  -->
+                                                                                    <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+                                                                                    <% if(i !== 1) { %>
+                                                                                      <li class="page-item disabled">
+                                                                                        <a class="page-link" href="#">...</a>
+                                                                                      </li>
+                                                                                    <% } %>
+                                                                                    <% for(; i <= (Number(current) + 4) && i <= pages; i++) { %>
+                                                                                      <% if(i == current) { %>
+                                                                                        <li class="page-item active">
+                                                                                          <a class="page-link" href="<%= i %>">
+                                                                                            <%= i %>
+                                                                                          </a>
+                                                                                        </li>
+                                                                                      <% } else { %>
+                                                                                        <li class="page-item">
+                                                                                          <a class="page-link" href="/perfil/<%= i %>">
+                                                                                            <%= i %>
+                                                                                          </a>
+                                                                                        </li>
+                                                                                      <% } %>
+                                                                                      <% if (i == Number(current) + 4 && i < pages) { %>
+                                                                                         <li class="page-item disabled">
+                                                                                           <a class="page-link" href="#">...</a>
+                                                                                         </li>
+                                                                                      <% } %>
+                                                                                    <% } %>
+                                                                                    <!-- LAST ITEM -->
+                                                                                    <% if(current == pages) { %>
+                                                                                      <li class="page-item disabled">
+                                                                                        <a class="page-link" href="#">
+                                                                                          Last
+                                                                                        </a>
+                                                                                      </li>
+                                                                                    <% } else { %>
+                                                                                      <li class="page-item">
+                                                                                        <a class="page-link" href="/perfil/<%= pages %>">
+                                                                                          Last
+                                                                                        </a>
+                                                                                      </li>
+                                                                                    <% } %>
+                                                                                  </ul>
+                                                                                </nav>
+                                                                              <% } %>
+                                                                            </div>
+                                                                          </div>
+                                                            </div>
+                                                        </div>
+    
+    
+    
+    
+                                                </div>
+                                                <!-- Single Tab Content End -->
+
+
+
+
+                            
+                                            
+
+
+                            
+                                            <!-- Single Tab Content Start -->
+                                            <div class="tab-pane fade" id="download" role="tabpanel">
+                                                <div class="myaccount-content">
+                                                    <h3>Downloads</h3>
+                                                    <div class="myaccount-table table-responsive text-center">
+                                                        <table class="table table-bordered">
+                                                            <thead class="thead-light">
+                                                                <tr>
+                                                                    <th>Product</th>
+                                                                    <th>Date</th>
+                                                                    <th>Expire</th>
+                                                                    <th>Download</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Haven - Free Real Estate PSD Template</td>
+                                                                    <td>Aug 22, 2018</td>
+                                                                    <td>Yes</td>
+                                                                    <td><a href="#" class="check-btn square-btn "><i class="fa fa-cloud-download"></i>
+                                                                            Download File</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>HasTech - Profolio Business Template</td>
+                                                                    <td>Sep 12, 2018</td>
+                                                                    <td>Never</td>
+                                                                    <td><a href="#" class="check-btn square-btn "><i class="fa fa-cloud-download"></i>
+                                                                            Download File</a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
                                             </div>
+                                            <!-- Single Tab Content End -->
+
+
+
+
+                            
+                                            <!-- Single Tab Content Start -->
+                                            <div class="tab-pane fade" id="payment-method" role="tabpanel">
+                                                    <div class="myaccount-content">
+                                                        <h3>Completar mis datos</h3>
+                                                        <div class="account-details-form">
+                                                            <form action="/passwordReset" method="POST">
+                                                                <div class="row">
+                                                                    <div class="col-lg-6">
+                                                                        <div class="single-input-item">
+                                                                            <label for="first-name" class="required">First Name</label>
+                                                                            <input type="text" id="first-name" placeholder="First Name" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6">
+                                                                        <div class="single-input-item">
+                                                                            <label for="last-name" class="required">Last Name</label>
+                                                                            <input type="text" id="last-name" placeholder="Last Name" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="single-input-item">
+                                                                    <label for="display-name" class="required">Contraseña</label>
+                                                                    <input type="password" name="resetPassword"  id="display-name" placeholder="Display Name" />
+                                                                </div>
+                                                                <div class="single-input-item">
+                                                                    <label for="email" class="required">Confirmar contraseña </label>
+                                                                    <input type="password" name="repeatresetPassword"id="email" placeholder="Email Address" />
+                                                                </div>
+                                                                <fieldset>
+                                                                    <legend>Password change</legend>
+                                                                    <div class="single-input-item">
+                                                                        <label for="current-pwd" class="required">Current Password</label>
+                                                                        <input type="password" id="current-pwd" placeholder="Current Password" />
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-lg-6">
+                                                                            <div class="single-input-item">
+                                                                                <label for="new-pwd" class="required">New Password</label>
+                                                                                <input type="password" id="new-pwd" placeholder="New Password" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-6">
+                                                                            <div class="single-input-item">
+                                                                                <label for="confirm-pwd" class="required">Confirm Password</label>
+                                                                                <input type="password" id="confirm-pwd" placeholder="Confirm Password" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </fieldset>
+                                                                <div class="single-input-item">
+                                                                    <button class="check-btn square-btn ">Save Changes</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- Single Tab Content End -->
+
+
+
+
+
+                            
+                                            <!-- Single Tab Content Start -->
+                                            <div class="tab-pane fade" id="address-edit" role="tabpanel">
+                                                <div class="myaccount-content">
+                                                    <h3>Mis datos</h3>
+                                                    <address>
+                                                        <p><strong><%= user.name %></strong></p>
+                                                        <p><%= user.direccion %> <br>
+                                                            Bandung, Indonesia 80412</p>
+                                                        <p>Mobile: <%= user.telefono %></p>
+                                                    </address>
+                                                    
+                                                </div>
+                                            </div>
+                                            <!-- Single Tab Content End -->
+
+
+
+                            
+                                            <!-- Single Tab Content Start -->
+                                            <div class="tab-pane fade" id="account-info" role="tabpanel">
+                                                <div class="myaccount-content">
+                                                    <h3>Cambiar contraseña</h3>
+                                                    <div class="account-details-form">
+                                                        <form action="/passwordReset" method="POST">
+                                                            <div class="row">
+                                                              
+                                                            </div>
+                                                            <div class="single-input-item">
+                                                                <label for="display-name" class="required">Contraseña</label>
+                                                                <input type="password" name="resetPassword"  id="display-name" placeholder="Display Name" />
+                                                            </div>
+                                                            <div class="single-input-item">
+                                                                <label for="email" class="required">Confirmar contraseña </label>
+                                                                <input type="password" name="repeatresetPassword"id="email" placeholder="Email Address" />
+                                                            </div>
+                                                           
+                                                            <div class="single-input-item">
+                                                                <button class="check-btn square-btn ">Guardar</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div> <!-- Single Tab Content End -->
+
+
+
+
                                         </div>
-                                    </div>
+                                    </div> <!-- My Account Tab Content End -->
                                 </div>
-                                <!-- [ stiped-table ] end -->
                             </div>
-                            <!-- [ Main Content ] end -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- [ Main Content ] end -->
+    </main>
 
-    <!-- Warning Section Starts -->
-    <!-- Older IE warning message -->
-    <!--[if lt IE 11]>
-        <div class="ie-warning">
-            <h1>Warning!!</h1>
-            <p>You are using an outdated version of Internet Explorer, please upgrade
-               <br/>to any of the following web browsers to access this website.
-            </p>
-            <div class="iew-container">
-                <ul class="iew-download">
-                    <li>
-                        <a href="http://www.google.com/chrome/">
-                            <img src="assets/images/browser/chrome.png" alt="Chrome">
-                            <div>Chrome</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.mozilla.org/en-US/firefox/new/">
-                            <img src="assets/images/browser/firefox.png" alt="Firefox">
-                            <div>Firefox</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.opera.com">
-                            <img src="assets/images/browser/opera.png" alt="Opera">
-                            <div>Opera</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.apple.com/safari/">
-                            <img src="assets/images/browser/safari.png" alt="Safari">
-                            <div>Safari</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                            <img src="assets/images/browser/ie.png" alt="">
-                            <div>IE (11 & above)</div>
-                        </a>
-                    </li>
-                </ul>
+    <footer>
+        <div class="newsletter-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6 col-md-6">
+                        <div class="newsletter-inner">
+                            <div class="newsletter-title">
+                                <h3>newsletter signup</h3>
+                            </div>
+                            <div class="newsletter-box">
+                                <form id="mc-form">
+                                    <input type="email" id="mc-email" autocomplete="off" placeholder="Your Email address">
+                                    <button class="newsletter-btn" id="mc-submit">
+                                        <i class="far fa-envelope"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="mailchimp-alerts">
+                            <div class="mailchimp-submitting"></div>
+                            <div class="mailchimp-success"></div>
+                            <div class="mailchimp-error"></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-md-6 ml-auto">
+                        <div class="social-share-area">
+                            <h3>Follow Us</h3>
+                            <div class="social-icon">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-rss"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p>Sorry for the inconvenience!</p>
         </div>
-    <![endif]-->
-    <!-- Warning Section Ends -->
+        <div class="widget-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer-widget">
+                            <div class="footer-widget-title">
+                                <h3>shipping and delivery</h3>
+                            </div>
+                            <div class="footer-widget-body">
+                                <p>Here you can read some details about a nifty little lifecycle of your order's
+                                    journey from
+                                    the time you place your order to your new treasures arriving at your doorstep.</p>
+                            </div>
+                            <div class="footer-widget-title mt-4">
+                                <h3>payment method</h3>
+                            </div>
+                            <div class="footer-widget-body">
+                                <p>It is equally important to choose the solution which offers a specific selection of
+                                    credit
+                                    cards. We take Visa & MasterCard as they are widely used by cyber customers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+                        <div class="footer-widget">
+                            <div class="footer-widget-title">
+                                <h3>useful link</h3>
+                            </div>
+                            <div class="footer-widget-body">
+                                <ul class="useful-link">
+                                    <li><a href="list.html">Our Products</a></li>
+                                    <li><a href="account.html">Account</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                    <li><a href="faq.html">Faq</a></li>
+                                    <li><a href="about-us.html">About us</a></li>
+                                    <li><a href="contact-us.html">contact us</a></li>
+                                    <li><a href="login-register.html">login/signup</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+                        <div class="footer-widget">
+                            <div class="footer-widget-title">
+                                <h3>our company</h3>
+                            </div>
+                            <div class="footer-widget-body">
+                                <ul class="useful-link">
+                                    <li><a href="list.html">Our Products</a></li>
+                                    <li><a href="account.html">Account</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                    <li><a href="faq.html">Faq</a></li>
+                                    <li><a href="about-us.html">About us</a></li>
+                                    <li><a href="contact-us.html">contact us</a></li>
+                                    <li><a href="login-register.html">login/signup</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer-widget profile-company">
+                            <div class="footer-widget-title pb-3">
+                                <div class="footer-logo">
+                                    <a href="index.html">
+                                        <img src="dist/assets/img/logo/logo-small.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer-widget-body">
+                                <ul class="address-box">
+                                    <li>
+                                        <span>ADDRESS:</span>
+                                        <p>Taman Kopo Indah 5, Sommerville 7 38<br>
+                                            Bandung, Indonesia</p>
+                                    </li>
+                                    <li>
+                                        <span>call us now:</span>
+                                        <p>+628192891821</p>
+                                    </li>
+                                    <li>
+                                        <span>email:</span>
+                                        <p>email@yourdomain.com</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row align-items-center flex-row-reverse">
+                    <div class="col-md-6 order-2 order-md-1">
+                        <div class="copyright-text">
+                            <p>&copy; copyright <a href="index.html">Elvira Fash</a>. All Rights Reserved</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ml-auto order-1 order-md-2">
+                        <div class="footer-payment">
+                            <img src="dist/assets/img/payment.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <!-- Required Js -->
-<script src="/assets/js/vendor-all.min.js"></script>
-	<script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/assets/js/pcoded.min.js"></script>
+ 
 
+    <!-- Start Search Popup -->
+    <div class="search-box">
+        <form class="minisearch" action="#">
+            <div class="search-area">
+                <input type="text" placeholder="Search Our Catalog">
+                <div class="action">
+                    <a href="#">
+                        <i class="fa fa-search"></i>
+                    </a>
+                </div>
+            </div>
+        </form>
+        <div class="close-btn">
+            <span>close</span>
+        </div>
+    </div>
+    <!-- End Search Popup -->
+
+    <!-- Scroll to top start -->
+    <div class="scroll-top not-visible">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <!-- Scroll to Top End -->
+
+    <script type="text/javascript" src="/dist/venus-ui.js"></script>
+    <script type="text/javascript" src="/dist/assets/packages/owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="/dist/assets/packages/nice-select/nice-select.js"></script>
+    <script type="text/javascript" src="/dist/assets/js/theme.js"></script>
+    <script>
+            <% if (flash.success && flash.success.length > 0) {%>
+                 new Noty({
+                     theme: 'relax',
+                     text: "<%= flash.success %>",
+                     type: 'success',
+                     layout: 'topRight',
+                     timeout: 2000
+                     
+                 }).show();    
+             <%} %>
+        
+             <% if (flash.error && flash.error.length > 0) {%>
+                 new Noty({
+                     theme: 'relax',
+                     text: "<%= flash.error %>",
+                     type: 'error',
+                     layout: 'topRight',
+                     timeout: 2000
+                     
+                 }).show();    
+             <%} %>
+        
+             
+         </script>
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+

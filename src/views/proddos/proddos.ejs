@@ -5,7 +5,7 @@
 
 	<!--================ Breadcumb Part HTML Start ======================-->
 
-	<section id="breadcumb" style="background:url(images/grid-view/banner.jpg) no-repeat center;background-size:cover;">
+	<section id="breadcumb" style="background:url(images/grid-view/banner.jpg) no-repeat center;background-size:cover; background:slategrey">
 		<div class="bnr-overlay">
 			<div class="container">
 				<div class="row">
@@ -40,21 +40,19 @@
 								<li><a href="product-listview.html"><i class="fas fa-th-list"></i></a></li>
 							</ul>
 						</div>
-						<div class="col-7 col-lg-3 col-sm-4 sort-by">
+						<div class="col-12 col-lg-6 col-sm-8 sort-by">
 							<form class="form-right">
-								<select>
-									<option value="">Sort by: Default</option>
-									<option value="">Sort by: Name</option>
+								<select onchange="location = this.value;">
+									<option value="">Categorías</option>
+									<option value="/produnoindex/1">Sort by: Name</option>
 									<option value="">Sort by: Size</option>
 									<option value="">Sort by: Date</option>
 								</select>
 							</form>
 						</div>
-						<div class="col-lg-3 price-filter">
-							<input type='text' id='rSlider' />
-						</div>
+						
 						<div class="col-12 col-lg-3 col-sm-4 p-show">
-							<P>Showing 16 items</P>
+							<P></P>
 						</div>
 					</div>
 				</div>

@@ -483,7 +483,7 @@ h3 {
 /*================== Header Part CSS Start ======================== */
 
 header .top-area {
-    background: #806bb6;
+    background: darkgrey
 }
 
 header .top-area p {
@@ -743,12 +743,13 @@ header .navigation .nav-appo a {
 /*========================= Banner Part CSS Start ======================== */
 
 #banner {
-    background: url(../images/banner.jpg) no-repeat center;
+    background: url(../images/baner.jpg) no-repeat center;
 }
 
 #banner .banner-overlay {
-    background: url(../images/overlay.png) no-repeat center;
+    background: url(../images/overlayy.png) no-repeat center;
     padding: 155px 0 64px;
+
 }
 
 #banner .banner-overlay h1 {
@@ -1618,6 +1619,7 @@ footer .footer-bottom p a {
 
 #breadcumb .bnr-overlay {
     background: rgba(128, 107, 182, 0.7);
+
     padding: 70px 0;
 }
 
